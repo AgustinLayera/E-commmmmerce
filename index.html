@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda de Juegos de PS3</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -23,34 +27,37 @@
         <section>
             <h2>Juegos Disponibles</h2>
 
-            <div>
+            <div class="product-card">
+                <img src="https://placehold.co/250x300/121927/ffffff?text=The+Last+of+Us" alt="Portada de The Last of Us" class="game-cover">
                 <h3>The Last of Us</h3>
                 <p>Un juego de acción y aventura aclamado por la crítica.</p>
                 <p>Precio: $19.99</p>
-                <button>Añadir al carrito</button>
+                <button class="add-to-cart">Añadir al carrito</button>
             </div>
 
-            <div>
+            <div class="product-card">
+                <img src="https://placehold.co/250x300/121927/ffffff?text=Grand+Theft+Auto+V" alt="Portada de Grand Theft Auto V" class="game-cover">
                 <h3>Grand Theft Auto V</h3>
                 <p>Sumérgete en el mundo de Los Santos y Blaine County.</p>
                 <p>Precio: $29.99</p>
-                <button>Añadir al carrito</button>
+                <button class="add-to-cart">Añadir al carrito</button>
             </div>
 
-            <div>
+            <div class="product-card">
+                <img src="https://placehold.co/250x300/121927/ffffff?text=Red+Dead+Redemption" alt="Portada de Red Dead Redemption" class="game-cover">
                 <h3>Red Dead Redemption</h3>
                 <p>Una épica aventura del Lejano Oeste.</p>
                 <p>Precio: $14.99</p>
-                <button>Añadir al carrito</button>
+                <button class="add-to-cart">Añadir al carrito</button>
             </div>
 
-            <div>
+            <div class="product-card">
+                <img src="https://placehold.co/250x300/121927/ffffff?text=Uncharted+2" alt="Portada de Uncharted 2: Among Thieves" class="game-cover">
                 <h3>Uncharted 2: Among Thieves</h3>
                 <p>Acompaña a Nathan Drake en una búsqueda de un tesoro mítico.</p>
                 <p>Precio: $9.99</p>
-                <button>Añadir al carrito</button>
+                <button class="add-to-cart">Añadir al carrito</button>
             </div>
-
         </section>
     </main>
 
@@ -58,5 +65,11 @@
         <p>&copy; 2024 Tienda de Juegos de PS3. Todos los derechos reservados.</p>
     </footer>
 
+    <!-- Cuadro de mensaje para notificaciones -->
+    <div class="message-box" id="messageBox">
+        <p id="messageText"></p>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
