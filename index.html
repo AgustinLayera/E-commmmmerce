@@ -1,190 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-commerce Landing Page</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            
-        }
-    </style>
+    <title>Tienda de Juegos de PS3</title>
 </head>
-<body class="antialiased">
+<body>
 
-    <!-- Header -->
-    <header class="bg-white shadow-sm sticky top-0 z-50">
-        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-            <a href="#" class="flex-shrink-0">
-                <span class="text-2xl font-bold text-gray-900">BrandName</span>
-            </a>
-            <div class="hidden md:flex items-center space-x-6">
-                <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors duration-200">Shop</a>
-                <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors duration-200">Categories</a>
-                <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors duration-200">About</a>
-                <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors duration-200">Contact</a>
-            </div>
-            <div class="flex items-center space-x-4">
-                <button class="relative text-gray-600 hover:text-gray-900 transition-colors duration-200">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
-                    <span class="absolute -top-1 -right-1 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-100 transform translate-x-1/2 -translate-y-1/2 bg-red-600 rounded-full">3</span>
-                </button>
-                <button class="md:hidden text-gray-600 hover:text-gray-900 transition-colors duration-200">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-                </button>
-            </div>
+    <header>
+        <h1>Tienda de Juegos de PS3</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Juegos</a></li>
+                <li><a href="#">Contacto</a></li>
+                <li><a href="#">Carrito</a></li>
+            </ul>
         </nav>
     </header>
 
     <main>
-        <!-- Hero Section -->
-        <section class="bg-gray-100 py-16 sm:py-24">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between">
-                <div class="md:w-1/2 text-center md:text-left mb-8 md:mb-0">
-                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight mb-4">
-                        Discover the New Collection
-                    </h1>
-                    <p class="text-lg text-gray-600 mb-8 max-w-lg mx-auto md:mx-0">
-                        Explore our curated selection of products. Quality and style, delivered to your door.
-                    </p>
-                    <a href="#" class="inline-block px-8 py-3 text-lg font-medium text-white bg-gray-900 rounded-full shadow-lg hover:bg-gray-700 transition-colors duration-300 transform hover:scale-105">
-                        Shop Now
-                    </a>
-                </div>
-                <div class="md:w-1/2">
-                     <img src="https://placehold.co/600x400/F1F5F9/1F2937?text=Hero+Image" alt="Hero Section Image" class="rounded-xl shadow-lg w-full h-auto object-cover transform hover:scale-105 transition-transform duration-300">
-                </div>
+        <section>
+            <h2>Juegos Disponibles</h2>
+
+            <div>
+                <h3>The Last of Us</h3>
+                <p>Un juego de acción y aventura aclamado por la crítica.</p>
+                <p>Precio: $19.99</p>
+                <button>Añadir al carrito</button>
             </div>
-        </section>
 
-        <!-- Product Grid Section -->
-        <section class="py-16 sm:py-24">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-12">Featured Products</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-                    <!-- Product Card 1 -->
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-xl transition-shadow duration-300">
-                        <div class="relative w-full h-64">
-                            <img src="https://placehold.co/400x400/F1F5F9/1F2937?text=Product+1" alt="Product Image" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                            <div class="absolute inset-0 bg-gray-900 bg-opacity-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                <button class="px-6 py-2 text-sm font-semibold text-white bg-gray-900 rounded-full shadow-lg hover:bg-gray-700 transition-colors duration-300">Add to Cart</button>
-                            </div>
-                        </div>
-                        <div class="p-6 text-center">
-                            <h3 class="text-lg font-semibold text-gray-900 mb-2">Product Title</h3>
-                            <p class="text-sm text-gray-500 mb-3">Category Name</p>
-                            <span class="text-xl font-bold text-gray-900">$29.99</span>
-                        </div>
-                    </div>
-
-                    <!-- Product Card 2 -->
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-xl transition-shadow duration-300">
-                        <div class="relative w-full h-64">
-                            <img src="https://placehold.co/400x400/F1F5F9/1F2937?text=Product+2" alt="Product Image" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                            <div class="absolute inset-0 bg-gray-900 bg-opacity-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                <button class="px-6 py-2 text-sm font-semibold text-white bg-gray-900 rounded-full shadow-lg hover:bg-gray-700 transition-colors duration-300">Add to Cart</button>
-                            </div>
-                        </div>
-                        <div class="p-6 text-center">
-                            <h3 class="text-lg font-semibold text-gray-900 mb-2">Another Product</h3>
-                            <p class="text-sm text-gray-500 mb-3">Category Name</p>
-                            <span class="text-xl font-bold text-gray-900">$45.50</span>
-                        </div>
-                    </div>
-
-                    <!-- Product Card 3 -->
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-xl transition-shadow duration-300">
-                        <div class="relative w-full h-64">
-                            <img src="https://placehold.co/400x400/F1F5F9/1F2937?text=Product+3" alt="Product Image" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                            <div class="absolute inset-0 bg-gray-900 bg-opacity-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                <button class="px-6 py-2 text-sm font-semibold text-white bg-gray-900 rounded-full shadow-lg hover:bg-gray-700 transition-colors duration-300">Add to Cart</button>
-                            </div>
-                        </div>
-                        <div class="p-6 text-center">
-                            <h3 class="text-lg font-semibold text-gray-900 mb-2">Cool Gadget</h3>
-                            <p class="text-sm text-gray-500 mb-3">Category Name</p>
-                            <span class="text-xl font-bold text-gray-900">$120.00</span>
-                        </div>
-                    </div>
-
-                    <!-- Product Card 4 -->
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-xl transition-shadow duration-300">
-                        <div class="relative w-full h-64">
-                            <img src="https://placehold.co/400x400/F1F5F9/1F2937?text=Product+4" alt="Product Image" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                            <div class="absolute inset-0 bg-gray-900 bg-opacity-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                <button class="px-6 py-2 text-sm font-semibold text-white bg-gray-900 rounded-full shadow-lg hover:bg-gray-700 transition-colors duration-300">Add to Cart</button>
-                            </div>
-                        </div>
-                        <div class="p-6 text-center">
-                            <h3 class="text-lg font-semibold text-gray-900 mb-2">Stylish Item</h3>
-                            <p class="text-sm text-gray-500 mb-3">Category Name</p>
-                            <span class="text-xl font-bold text-gray-900">$75.00</span>
-                        </div>
-                    </div>
-                </div>
+            <div>
+                <h3>Grand Theft Auto V</h3>
+                <p>Sumérgete en el mundo de Los Santos y Blaine County.</p>
+                <p>Precio: $29.99</p>
+                <button>Añadir al carrito</button>
             </div>
-        </section>
 
+            <div>
+                <h3>Red Dead Redemption</h3>
+                <p>Una épica aventura del Lejano Oeste.</p>
+                <p>Precio: $14.99</p>
+                <button>Añadir al carrito</button>
+            </div>
+
+            <div>
+                <h3>Uncharted 2: Among Thieves</h3>
+                <p>Acompaña a Nathan Drake en una búsqueda de un tesoro mítico.</p>
+                <p>Precio: $9.99</p>
+                <button>Añadir al carrito</button>
+            </div>
+
+        </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <!-- About Column -->
-                <div>
-                    <h3 class="text-xl font-bold mb-4">BrandName</h3>
-                    <p class="text-sm text-gray-400">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </p>
-                </div>
-                <!-- Links Column -->
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-200">Shop All</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-200">New Arrivals</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-200">Sale</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-200">FAQs</a></li>
-                    </ul>
-                </div>
-                <!-- Social Column -->
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
-                    <ul class="flex space-x-4">
-                        <li>
-                            <a href="#" class="text-gray-400 hover:text-white transition-colors duration-200">
-                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 13.5h2.5L17.5 9H14v-2c0-1.03 0-2 .25-2.5h2.25V2.3c-.5-.07-1-.15-2.5-.15-2.5 0-4.5 1.7-4.5 5.5v2.8h-3v4.5h3v9.25h5V13.5z"></path></svg>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="text-gray-400 hover:text-white transition-colors duration-200">
-                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.5 6.5c-.8.35-1.7.6-2.6.7.9-.5 1.6-1.5 1.9-2.6-.9.5-1.9.8-3.1 1-.9.6-2 1-3.2 1-2.5 0-4.5-2-4.5-4.5 0-.35.05-.7.1-1-.45.1-.8.2-1.2.3-.65.2-1.3.45-1.9.7-.7.5-1.4 1.1-2 1.8-1.5 1.5-2.4 3.5-2.4 5.8 0 4.1 3.5 7.5 7.5 7.5 3.5 0 6.5-2.5 7.5-6.5h-2.5c-.5.5-.9 1-1.5 1.25-.5.25-1.1.4-1.8.4-1.8 0-3.25-1.4-3.25-3.25s1.4-3.25 3.25-3.25c.55 0 1.1.15 1.6.4.5.25 1 .6 1.4 1h3.5l-1.5-1.25z"></path></svg>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- Newsletter Column -->
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Newsletter</h3>
-                    <p class="text-sm text-gray-400 mb-4">Stay updated with our latest news and promotions.</p>
-                    <form class="flex">
-                        <input type="email" placeholder="Enter your email" class="w-full px-4 py-2 rounded-l-lg bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-gray-600">
-                        <button type="submit" class="px-4 py-2 bg-gray-700 rounded-r-lg hover:bg-gray-600 transition-colors duration-200">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                        </button>
-                    </form>
-                </div>
-            </div>
-            <div class="mt-8 pt-8 border-t border-gray-700 text-center">
-                <p class="text-sm text-gray-500">&copy; 2023 BrandName. All rights reserved.</p>
-            </div>
-        </div>
+    <footer>
+        <p>&copy; 2024 Tienda de Juegos de PS3. Todos los derechos reservados.</p>
     </footer>
 
 </body>
