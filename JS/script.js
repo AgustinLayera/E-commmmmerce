@@ -1,5 +1,6 @@
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
+/* ===== ELEMENTOS ===== */
 const cartBadge = document.getElementById('cartBadge');
 const cartPanel = document.getElementById('cartPanel');
 const cartList = document.getElementById('cartList');
@@ -16,8 +17,10 @@ const sideMenu = document.getElementById('sideMenu');
 openMenu.addEventListener('click', () => sideMenu.classList.add('open'));
 closeMenu.addEventListener('click', () => sideMenu.classList.remove('open'));
 
-/* ===== CARRITO ===== */
-document.querySelector('.cart-container').addEventListener('click', () => {
+/* ===== ABRIR CARRITO ===== */
+const cartButton = document.querySelector('.nav__item--cart');
+
+cartButton.addEventListener('click', () => {
     cartPanel.classList.add('open');
     renderCart();
 });
@@ -26,6 +29,7 @@ closeCart.addEventListener('click', () => {
     cartPanel.classList.remove('open');
 });
 
+/* ===== RENDER CARRITO ===== */
 function renderCart() {
     cartList.innerHTML = '';
 
@@ -33,7 +37,7 @@ function renderCart() {
         const li = document.createElement('li');
         li.classList.add('cart__item');
         li.innerHTML = `
-            ${product}
+            <span>${product}</span>
             <span class="cart__remove" data-index="${index}">✖</span>
         `;
         cartList.appendChild(li);
@@ -43,30 +47,29 @@ function renderCart() {
     cartBadge.innerText = cart.length;
 }
 
-/* Eliminar producto */
+/* ===== ELIMINAR ITEM ===== */
 cartList.addEventListener('click', (e) => {
     if (e.target.classList.contains('cart__remove')) {
-        const index = e.target.dataset.index;
-        cart.splice(index, 1);
+        cart.splice(e.target.dataset.index, 1);
         renderCart();
     }
 });
 
-/* Vaciar carrito */
+/* ===== VACIAR CARRITO ===== */
 clearCart.addEventListener('click', () => {
     cart = [];
     renderCart();
 });
 
-/* ===== AGREGAR AL CARRITO ===== */
-const buttons = document.querySelectorAll('.add-to-cart');
+/* ===== AÑADIR AL CARRITO ===== */
+const buttons = document.querySelectorAll('.product__add-btn');
 const messageBox = document.getElementById('messageBox');
 const messageText = document.getElementById('messageText');
 
 buttons.forEach(button => {
     button.addEventListener('click', () => {
-        const productCard = button.closest('.product-card');
-        const productName = productCard.querySelector('h3').innerText;
+        const product = button.closest('.product');
+        const productName = product.querySelector('.product__title').innerText;
 
         cart.push(productName);
         renderCart();

@@ -293,6 +293,7 @@ body {
     .products {
         grid-template-columns: repeat(4, 1fr);
     }
+    
 }
 /* === CART === */
 .cart {
