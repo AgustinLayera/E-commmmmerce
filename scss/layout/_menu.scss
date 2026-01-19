@@ -1,0 +1,36 @@
+.menu {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 300px;
+  height: 100%;
+  background-color: $dark-blue;
+  padding: 20px;
+  transition: left 0.3s ease;
+  z-index: 2000;
+
+  &--open {
+    left: 0;
+  }
+
+  &__close {
+    font-size: 24px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: white;
+    display: block;
+    margin-left: auto;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+  }
+
+  &__item {
+    margin: 15px 0;
+    cursor: pointer;
+  }
+}

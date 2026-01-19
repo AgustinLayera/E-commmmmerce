@@ -1,0 +1,48 @@
+@media (max-width: 480px) {
+  .header__left {
+    justify-content: space-between;
+  }
+
+  .header__title {
+    font-size: 1.5em;
+  }
+
+  .nav__list {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .products {
+    grid-template-columns: 1fr;
+  }
+
+  .product {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .menu {
+    width: 100%;
+  }
+
+  .cart__badge {
+    top: -6px;
+    right: -6px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .header__title {
+    font-size: 2em;
+  }
+}
+
+@media (min-width: 1200px) {
+  .products {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
